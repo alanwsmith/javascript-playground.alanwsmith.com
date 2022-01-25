@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testing passing external variables in functions</title>
+    <style>
+      body {
+        background-color: #333;
+        color: #999;
+      }
+      a {
+        color: #883311;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const state = {
+        a: 1,
+      }
+
+      function blastOff() {
+        document.addEventListener('click', processClick)
+        console.log(`${state.a}`)
+      }
+
+      function processClick(e) {
+        state.a = state.a + 1
+        console.log(`newstate: ${state.a}`)
+        console.log('processing click')
+      }
+      document.addEventListener('DOMContentLoaded', blastOff)
+    </script>
+    <button id="clicker">Click Me</button>
+  </body>
+</html>
