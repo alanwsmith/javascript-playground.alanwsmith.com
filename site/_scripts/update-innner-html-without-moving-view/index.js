@@ -8,6 +8,7 @@ import Highlight, { defaultProps } from 'prism-react-renderer'
 // https://github.com/FormidableLabs/prism-react-renderer
 
 export default function Page(props) {
+  return <div>asdf</div>
 
   return (
     <div>
@@ -119,13 +120,13 @@ export async function getStaticProps(context) {
     }
   }
   const content_html = loadFileAsString(
-    `./_scripts/update-innner-html-without-moving-view/content.html`
+    `./pages/sandbox/update-innner-html-without-moving-view/content.html`
   )
   const script_js = loadFileAsString(
-    `./_scripts/update-innner-html-without-moving-view/script.js`
+    `./pages/sandbox/update-innner-html-without-moving-view/script.js`
   )
   const data_json = loadFileAsString(
-    `./_scripts/update-innner-html-without-moving-view/data.json`
+    `./pages/sandbox/update-innner-html-without-moving-view/data.json`
   )
   return {
     props: {
