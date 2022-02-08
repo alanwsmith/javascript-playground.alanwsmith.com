@@ -1,4 +1,5 @@
 import HeadTag from '../components/HeadTag'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -15,6 +16,13 @@ export default function Home() {
         This is a place for me to mess around with javascript to get a better
         understanding of how it works
       </p>
+      <ul>
+        <li>
+          <Link href="/sandbox/update-innner-html-without-moving-view">
+            <a>update-innner-html-without-moving-view</a>
+          </Link>
+        </li>
+      </ul>
     </>
   )
 }

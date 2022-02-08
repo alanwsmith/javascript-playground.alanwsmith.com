@@ -24,8 +24,20 @@
     @apply text-xl;
     @apply font-bold;
     @apply pb-2;
+    @apply border-b;
+    @apply mt-10;
+    @apply mb-3;
   }
   ul {
     @apply pb-6;
+  }
+  button {
+    @apply bg-gray-500;
+    @apply hover:bg-gray-700;
+    @apply text-white;
+    @apply font-bold;
+    @apply py-2;
+    @apply px-4;
+    @apply rounded;
   }
 }
