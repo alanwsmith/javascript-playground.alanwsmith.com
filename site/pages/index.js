@@ -22,6 +22,11 @@ export default function Home() {
             <a>update-innner-html-without-moving-view</a>
           </Link>
         </li>
+        <li>
+          <Link href="/sandbox/random-numbers">
+            <a>random-numbers</a>
+          </Link>
+        </li>
       </ul>
     </>
   )
