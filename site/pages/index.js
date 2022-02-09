@@ -18,12 +18,12 @@ export default function Home() {
       </p>
       <ul>
         <li>
-          <Link href="/sandbox/update-innner-html-without-moving-view">
+          <Link href="/update-innner-html-without-moving-view">
             <a>update-innner-html-without-moving-view</a>
           </Link>
         </li>
         <li>
-          <Link href="/sandbox/random-numbers">
+          <Link href="/random-numbers">
             <a>random-numbers</a>
           </Link>
         </li>
