@@ -18,7 +18,8 @@
   h2 {
     @apply text-2xl;
     @apply font-bold;
-    @apply pb-2;
+    @apply pb-1;
+    @apply pt-4;
   }
   h3 {
     @apply text-xl;
@@ -49,5 +50,8 @@
   }
   li {
     @apply pb-2;
+  }
+  code {
+    @apply bg-blue-900;
   }
 }
