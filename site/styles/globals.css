@@ -51,4 +51,7 @@
   li {
     @apply pb-2;
   }
+  code {
+    @apply bg-blue-900;
+  }
 }
