@@ -24,43 +24,53 @@ export default function Renderer({ code, langauge }) {
         language={'jsx'}
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
-          <pre className={`${className} code_block`} style={style}>
-            <button
-              onClick={() => {
-                const code_text = document.getElementById(`${element_id}_code`)
-                code_text.select()
-                document.execCommand('copy')
-                console.log('hasdf')
-              }}
-              style={{ position: 'absolute', top: 0, right: 0, opacity: 0.4 }}
-            >
-              Copy
-            </button>
-            {tokens.map((line, i) => (
-              <div
-                key={i}
-                {...getLineProps({ line, key: i })}
-                className="token-line code_line"
+          <>
+            <pre className={`${className} code_block`} style={style}>
+              <button
+                onClick={() => {
+                  const code_text = document.getElementById(
+                    `${element_id}_code`
+                  )
+                  code_text.select()
+                  document.execCommand('copy')
+                  console.log('hasdf')
+                }}
+                style={{ position: 'absolute', top: 0, right: 0, opacity: 0.4 }}
               >
-                <span
-                  className={
-                    i === 0
-                      ? `code_line_number code_line_number_first`
-                      : i === tokens.length - 1
-                      ? `code_line_number code_line_number_last`
-                      : `code_line_number`
-                  }
+                Copy
+              </button>
+              {tokens.map((line, i) => (
+                <div
+                  key={i}
+                  {...getLineProps({ line, key: i })}
+                  className="token-line code_line"
                 >
-                  {i + 1}
-                </span>
-                <span className={`code_line_content`}>
-                  {line.map((token, key) => (
-                    <span key={key} {...getTokenProps({ token, key })} />
-                  ))}
-                </span>
-              </div>
-            ))}
-          </pre>
+                  <span
+                    className={
+                      i === 0
+                        ? `code_line_number code_line_number_first`
+                        : i === tokens.length - 1
+                        ? `code_line_number code_line_number_last`
+                        : `code_line_number`
+                    }
+                  >
+                    {i + 1}
+                  </span>
+                  <span className={`code_line_content`}>
+                    {line.map((token, key) => (
+                      <span key={key} {...getTokenProps({ token, key })} />
+                    ))}
+                  </span>
+                </div>
+              ))}
+            </pre>
+
+            <p>Example Output:</p>
+
+            <pre className="code_block_output" style={style}>
+              <code className="code_lines" id={element_id}></code>
+            </pre>
+          </>
         )}
       </Highlight>
       <textarea
@@ -69,11 +79,6 @@ export default function Renderer({ code, langauge }) {
         readOnly={true}
         style={{ position: 'absolute', left: '-9000px' }}
       ></textarea>
-      <p>Example Output:</p>
-
-      <pre className="code_block">
-        <code className="code_lines" id={element_id}></code>
-      </pre>
 
       <Script
         id={`${element_id}_script`}
