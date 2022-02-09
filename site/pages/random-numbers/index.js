@@ -34,7 +34,7 @@ export async function getStaticProps(context) {
     }
   }
   const random_number_script = loadFileAsString(
-    `./pages/sandbox/random-numbers/random-number.script`
+    `./pages/random-numbers/random-number.script`
   )
   return {
     props: {
