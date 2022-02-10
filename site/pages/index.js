@@ -23,8 +23,13 @@ export default function Home() {
           </Link>
         </li>
         <li>
-          <Link href="/random-numbers">
-            <a>random-numbers</a>
+          <Link href="/random-number">
+            <a>Random Number</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/random-number-with-min-max">
+            <a>Random Number With Minimum And Maximum</a>
           </Link>
         </li>
       </ul>

@@ -25,14 +25,15 @@ function get_random_number(max_number) {
     <>
       <h1>Random Number</h1>
       <p>This is the standard random number generator I use.</p>
-      <RendererV2 example={random_number_example} language="jsx" />
+      <RendererV2 example={random_number_function_example} language="jsx" />
       <p>
         It works by setting a maximum number and then generates a number between
         1 and whatever was set. It&apos;s inclusive so both 1 and whatever the
         max number is are possible values.
       </p>
-      <p>Here&apos;s the same thing as a function:</p>
-      <RendererV2 example={random_number_function_example} language="jsx" />
+      <hr />
+      <p>Here&apos;s the same thing without being wrapped in a function:</p>
+      <RendererV2 example={random_number_example} language="jsx" />
     </>
   )
 }

@@ -1,5 +1,0 @@
-const min = 4
-const max = 20
-const between_two_nums = Math.floor((Math.random() * (max - min + 1)) + min)
-
-document.getElementById('between_two_nums').innerText = between_two_nums

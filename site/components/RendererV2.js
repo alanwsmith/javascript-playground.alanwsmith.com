@@ -102,7 +102,6 @@ document.getElementById('${snippet_id}').innerText = ${example.output}`
                   )
                   code_text.select()
                   document.execCommand('copy')
-                  console.log('hasdf')
                 }}
                 style={{ position: 'absolute', top: 0, right: 0, opacity: 0.3 }}
               >
@@ -116,7 +115,9 @@ document.getElementById('${snippet_id}').innerText = ${example.output}`
       <Highlight
         {...defaultProps}
         theme={dracula}
-        code={`console.log(${example.output})`}
+        code={`console.log(
+  ${example.output}
+)`}
         language={language}
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (

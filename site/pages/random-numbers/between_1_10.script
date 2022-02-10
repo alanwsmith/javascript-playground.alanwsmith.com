@@ -1,3 +1,0 @@
-const between_1_10 = Math.floor((Math.random() * 10) + 1)
-
-document.getElementById('between_1_10').innerText = between_1_10 

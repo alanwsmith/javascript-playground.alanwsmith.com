@@ -1,3 +1,0 @@
-const basic = Math.random()
-
-document.getElementById('basic').innerText = basic
