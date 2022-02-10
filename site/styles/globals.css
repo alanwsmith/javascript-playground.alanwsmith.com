@@ -17,6 +17,8 @@
     @apply text-3xl;
     @apply font-bold;
     @apply pb-2;
+    @apply mt-4;
+    @apply mb-2;
   }
 
   h2 {
@@ -45,6 +47,10 @@
     @apply rounded;
   }
 
+  p {
+    @apply pb-4;
+  }
+
   ul {
     @apply list-disc;
     @apply pl-5;
@@ -62,8 +68,8 @@
   }
 
   .code_block {
-    @apply mt-6;
-    @apply mb-4;
+    @apply mt-2;
+    @apply mb-6;
     @apply rounded-md;
     @apply border;
     @apply border-gray-600;
@@ -109,7 +115,7 @@
   }
 
   .code_console_log_block {
-    @apply mt-4;
+    @apply mt-2;
     @apply py-2;
     @apply rounded-t-md;
     @apply border-t;
