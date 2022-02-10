@@ -6,6 +6,7 @@
   body {
     @apply bg-gray-900;
     @apply text-gray-300;
+    @apply text-lg;
   }
 
   a {
@@ -21,15 +22,17 @@
   h2 {
     @apply text-2xl;
     @apply font-bold;
-    @apply pb-1;
+    @apply mb-3;
     @apply pt-4;
+    @apply text-gray-500;
+    @apply border-b;
+    @apply border-gray-500;
   }
 
   h3 {
     @apply text-xl;
     @apply font-bold;
     @apply pb-2;
-    @apply border-b;
     @apply mt-10;
     @apply mb-3;
   }
@@ -73,6 +76,7 @@
 
   .code_line {
     display: table-row;
+    @apply text-base;
   }
 
   .code_line_number {

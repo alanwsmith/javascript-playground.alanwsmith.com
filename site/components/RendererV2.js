@@ -49,7 +49,7 @@ document.getElementById('${snippet_id}').innerText = ${example.output}`
     <>
       <Highlight
         {...defaultProps}
-        theme={dracula}
+        theme={nightOwl}
         code={example.snippet.trim()}
         language={language}
       >
