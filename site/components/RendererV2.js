@@ -55,25 +55,35 @@ document.getElementById('${snippet_id}').innerText = ${example.output}`
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <>
-            <pre className={`${className} code_block`} style={style}>
+            <pre className={`${className} code_block`}>
               {tokens.map((line, i) => (
                 <div
                   key={i}
                   {...getLineProps({ line, key: i })}
                   className="token-line code_line"
                 >
+                  {tokens.length > 1 ? (
+                    <span
+                      className={
+                        i === 0
+                          ? `code_line_number code_line_number_first`
+                          : i === tokens.length - 1
+                          ? `code_line_number code_line_number_last`
+                          : `code_line_number`
+                      }
+                    >
+                      {i + 1}
+                    </span>
+                  ) : (
+                    ''
+                  )}
                   <span
                     className={
-                      i === 0
-                        ? `code_line_number code_line_number_first`
-                        : i === tokens.length - 1
-                        ? `code_line_number code_line_number_last`
-                        : `code_line_number`
+                      tokens.length > 1
+                        ? `code_line_content`
+                        : `code_line_content_single_line`
                     }
                   >
-                    {i + 1}
-                  </span>
-                  <span className={`code_line_content`}>
                     {line.map((token, key) => (
                       <span key={key} {...getTokenProps({ token, key })} />
                     ))}
@@ -93,24 +103,13 @@ document.getElementById('${snippet_id}').innerText = ${example.output}`
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <>
-            <pre className={`${className} code_block`} style={style}>
+            <pre className={`${className} code_console_log_block`}>
               {tokens.map((line, i) => (
                 <div
                   key={i}
                   {...getLineProps({ line, key: i })}
                   className="token-line code_line"
                 >
-                  <span
-                    className={
-                      i === 0
-                        ? `code_line_number code_line_number_first`
-                        : i === tokens.length - 1
-                        ? `code_line_number code_line_number_last`
-                        : `code_line_number`
-                    }
-                  >
-                    {i + 1}
-                  </span>
                   <span className={`code_line_content`}>
                     {line.map((token, key) => (
                       <span key={key} {...getTokenProps({ token, key })} />
@@ -119,7 +118,7 @@ document.getElementById('${snippet_id}').innerText = ${example.output}`
                 </div>
               ))}
             </pre>
-            <pre className="code_block_output" style={style}>
+            <pre className="code_block_output">
               <code className="code_lines" id={snippet_id}></code>
             </pre>
           </>

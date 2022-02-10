@@ -67,20 +67,8 @@
     @apply border;
     @apply border-gray-600;
     color: #d6deeb;
-    background-color: #011627;
+    background-color: #404047;
     position: relative;
-  }
-
-  .code_block_output {
-    @apply pl-4;
-    @apply py-2;
-    @apply mt-6;
-    @apply mb-4;
-    @apply rounded-md;
-    @apply border;
-    @apply border-gray-600;
-    color: #d6deeb;
-    background-color: #011627;
   }
 
   .code_line {
@@ -110,5 +98,37 @@
   .code_line_content {
     display: table-cell;
     @apply pl-4;
+  }
+
+  .code_line_content_single_line {
+    display: table-cell;
+    @apply pl-4;
+    @apply py-3;
+  }
+
+  .code_console_log_block {
+    @apply mt-4;
+    @apply py-2;
+    @apply rounded-t-md;
+    @apply border-t;
+    @apply border-l;
+    @apply border-r;
+    @apply border-b;
+    @apply border-gray-600;
+    color: #d6deeb;
+    background-color: #404047;
+  }
+
+  .code_block_output {
+    @apply pl-4;
+    @apply py-2;
+    @apply mb-4;
+    @apply rounded-b-md;
+    @apply border-b;
+    @apply border-l;
+    @apply border-r;
+    @apply border-gray-600;
+    color: #d6deeb;
+    background-color: #011627;
   }
 }
