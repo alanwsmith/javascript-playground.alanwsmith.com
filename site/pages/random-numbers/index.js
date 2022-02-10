@@ -31,6 +31,27 @@ const basic_example = Math.random()
     output: `basic_example`,
   }
 
+  const random_number_function_example = {
+    snippet: `
+function get_random_number(max) {
+  return Math.floor(
+    (Math.random() * max_number) + 1
+  )
+}`,
+    output: `get_random_number(5)`,
+  }
+
+  const between_two_numbers_function = {
+    snippet: `
+function get_random_number_min_max(min, max) {
+  return Math.floor(
+    (Math.random() * (max - min + 1)) 
+    + min
+  )
+}`,
+    output: `get_random_number_min_max(4, 7)`,
+  }
+
   return (
     <>
       <h1>Random Numbers</h1>
@@ -43,6 +64,8 @@ const basic_example = Math.random()
         2, 3, 4, or 5.
       </p>
       <RendererV2 example={random_number_example} language="jsx" />
+      <p>Here&apos;s the same thing as a function</p>
+      <RendererV2 example={random_number_function_example} language="jsx" />
 
       <h2>Between Two Numbers</h2>
       <p>
@@ -51,6 +74,9 @@ const basic_example = Math.random()
         the number will be either 7, 8, 9, or 10.
       </p>
       <RendererV2 example={min_max_example} language="jsx" />
+
+      <p>Here&apos;s that as a function</p>
+      <RendererV2 example={between_two_numbers_function} language="jsx" />
 
       <h2>Basic Call</h2>
       <p>
