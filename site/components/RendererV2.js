@@ -47,6 +47,12 @@ document.getElementById('${snippet_id}').innerText = ${example.output}`
 
   return (
     <>
+      <textarea
+        id={`${snippet_id}_code`}
+        value={example.snippet.trim()}
+        readOnly={true}
+        style={{ position: 'absolute', left: '-9000px' }}
+      ></textarea>
       <Highlight
         {...defaultProps}
         theme={nightOwl}
@@ -90,6 +96,20 @@ document.getElementById('${snippet_id}').innerText = ${example.output}`
                   </span>
                 </div>
               ))}
+
+              <button
+                onClick={() => {
+                  const code_text = document.getElementById(
+                    `${snippet_id}_code`
+                  )
+                  code_text.select()
+                  document.execCommand('copy')
+                  console.log('hasdf')
+                }}
+                style={{ position: 'absolute', top: 0, right: 0, opacity: 0.3 }}
+              >
+                Copy
+              </button>
             </pre>
           </>
         )}
