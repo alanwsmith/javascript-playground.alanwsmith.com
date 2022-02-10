@@ -43,8 +43,6 @@ export default function RendererV2({ example, language }) {
 ${example.snippet}
 document.getElementById('${snippet_id}').innerText = ${example.output}`
 
-  console.log(runCode)
-
   return (
     <>
       <textarea
