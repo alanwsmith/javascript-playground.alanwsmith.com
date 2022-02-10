@@ -1,6 +1,14 @@
 import Renderer from '../../components/Renderer'
+import RendererV2 from '../../components/RendererV2'
 
 export default function Page(props) {
+  const example_1 = {
+    snippet: `
+const example_1 = Math.random()
+`,
+    output: `example_1`,
+  }
+
   const basic_example = `
 const basic_example = Math.random()
 
@@ -26,6 +34,7 @@ console.log(between_nums)
 
   return (
     <>
+      <RendererV2 example={example_1} language="jsx" />
       <h1>Random Numbers</h1>
       <h2>Between 1 And A Max Number</h2>
       <p>
@@ -44,7 +53,7 @@ console.log(between_nums)
       <h2>Basic Call</h2>
       <p>
         This is the basic functionality which provides a decimal number between
-        0 and 1. 
+        0 and 1.
       </p>
       <Renderer code={basic_example} language="javascript" />
     </>
