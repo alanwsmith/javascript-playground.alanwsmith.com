@@ -117,9 +117,7 @@ document.getElementById('${snippet_id}').innerText = ${example.output}`
       <Highlight
         {...defaultProps}
         theme={nightOwl}
-        code={`console.log(
-  ${example.output}
-)`}
+        code={`console.log(${example.output})`}
         language={language}
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
@@ -131,15 +129,7 @@ document.getElementById('${snippet_id}').innerText = ${example.output}`
                   {...getLineProps({ line, key: i })}
                   className="token-line code_line"
                 >
-                  <span
-                    className={
-                      i === 0
-                        ? `code_line_number code_line_number_first`
-                        : `code_line_number`
-                    }
-                  >
-                    &nbsp;
-                  </span>
+                  <span className="code_line_number_blank">&nbsp;</span>
                   <span className={`code_line_content`}>
                     {line.map((token, key) => (
                       <span key={key} {...getTokenProps({ token, key })} />

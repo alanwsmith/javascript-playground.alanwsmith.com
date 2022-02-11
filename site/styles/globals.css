@@ -99,6 +99,18 @@
     @apply text-gray-500;
   }
 
+  .code_line_number_blank {
+    display: table-cell;
+    text-align: right;
+    user-select: none;
+    @apply bg-gray-900;
+    @apply pl-4;
+    @apply pr-3;
+    @apply text-gray-500;
+    @apply py-1;
+    @apply rounded-tl-md;
+  }
+
   .code_line_number_output {
     display: table-cell;
     text-align: right;
