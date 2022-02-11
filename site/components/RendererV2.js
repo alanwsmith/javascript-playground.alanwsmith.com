@@ -2,7 +2,6 @@ import Script from 'next/script'
 import React from 'react'
 import Highlight, { defaultProps } from 'prism-react-renderer'
 import nightOwl from 'prism-react-renderer/themes/nightOwl'
-import dracula from 'prism-react-renderer/themes/dracula'
 
 // const holding = `
 //               <button
@@ -96,6 +95,7 @@ document.getElementById('${snippet_id}').innerText = ${example.output}`
               ))}
 
               <button
+                className="copy-button"
                 onClick={() => {
                   const code_text = document.getElementById(
                     `${snippet_id}_code`
@@ -111,10 +111,12 @@ document.getElementById('${snippet_id}').innerText = ${example.output}`
           </>
         )}
       </Highlight>
+
       <p>Example Output:</p>
+
       <Highlight
         {...defaultProps}
-        theme={dracula}
+        theme={nightOwl}
         code={`console.log(
   ${example.output}
 )`}
@@ -129,6 +131,15 @@ document.getElementById('${snippet_id}').innerText = ${example.output}`
                   {...getLineProps({ line, key: i })}
                   className="token-line code_line"
                 >
+                  <span
+                    className={
+                      i === 0
+                        ? `code_line_number code_line_number_first`
+                        : `code_line_number`
+                    }
+                  >
+                    &nbsp;
+                  </span>
                   <span className={`code_line_content`}>
                     {line.map((token, key) => (
                       <span key={key} {...getTokenProps({ token, key })} />
@@ -138,7 +149,8 @@ document.getElementById('${snippet_id}').innerText = ${example.output}`
               ))}
             </pre>
             <pre className="code_block_output">
-              <code className="code_lines" id={snippet_id}></code>
+              <span className={`code_line_number_output`}>&gt;</span>
+              <span id={snippet_id} className={`code_line_content`}></span>
             </pre>
           </>
         )}

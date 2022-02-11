@@ -39,12 +39,13 @@
     @apply mb-3;
   }
 
-  button {
+  .copy-button {
     @apply bg-gray-500;
     @apply hover:bg-gray-700;
     @apply text-white;
     @apply px-2;
     @apply rounded;
+    @apply text-sm;
   }
 
   p {
@@ -78,15 +79,14 @@
     @apply mb-6;
     @apply rounded-md;
     @apply border;
-    @apply border-gray-600;
+    @apply border-gray-500;
     color: #d6deeb;
-    background-color: #404047;
+    @apply bg-gray-700;
     position: relative;
   }
 
   .code_line {
     display: table-row;
-    @apply text-base;
   }
 
   .code_line_number {
@@ -97,6 +97,19 @@
     @apply pl-4;
     @apply pr-3;
     @apply text-gray-500;
+  }
+
+  .code_line_number_output {
+    display: table-cell;
+    text-align: right;
+    user-select: none;
+    @apply bg-gray-900;
+    @apply pl-4;
+    @apply pr-3;
+    @apply text-gray-500;
+    @apply rounded-bl-md;
+    @apply pt-1;
+    @apply pb-1;
   }
 
   .code_line_number_first {
@@ -122,27 +135,27 @@
 
   .code_console_log_block {
     @apply mt-2;
-    @apply py-2;
     @apply rounded-t-md;
     @apply border-t;
     @apply border-l;
     @apply border-r;
     @apply border-b;
-    @apply border-gray-600;
+    @apply border-gray-500;
     color: #d6deeb;
-    background-color: #404047;
+    @apply bg-gray-700;
   }
 
   .code_block_output {
-    @apply pl-4;
-    @apply py-2;
     @apply mb-4;
     @apply rounded-b-md;
     @apply border-b;
     @apply border-l;
     @apply border-r;
-    @apply border-gray-600;
+    @apply border-l-gray-500;
+    @apply border-r-gray-500;
+    @apply border-b-gray-500;
+    @apply border-t-gray-400;
     color: #d6deeb;
-    background-color: #011627;
+    @apply bg-gray-800;
   }
 }
