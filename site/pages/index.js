@@ -18,6 +18,11 @@ export default function Home() {
       </p>
       <ul>
         <li>
+          <Link href="/get-a-substring-from-a-string">
+            <a>get-a-substring-from-a-string</a>
+          </Link>
+        </li>
+        <li>
           <Link href="/update-innner-html-without-moving-view">
             <a>update-innner-html-without-moving-view</a>
           </Link>

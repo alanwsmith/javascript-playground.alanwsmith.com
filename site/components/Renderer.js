@@ -1,3 +1,10 @@
+
+
+
+// TODO: Remove this and just use RendererV2
+
+
+
 import Script from 'next/script'
 import React from 'react'
 import Highlight, { defaultProps } from 'prism-react-renderer'

@@ -112,8 +112,6 @@ document.getElementById('${snippet_id}').innerText = ${example.output}`
         )}
       </Highlight>
 
-      <p>Example Output:</p>
-
       <Highlight
         {...defaultProps}
         theme={nightOwl}
