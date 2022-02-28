@@ -76,10 +76,19 @@
 
   .code_block {
     @apply mt-2;
-    @apply mb-6;
-    @apply rounded-md;
-    @apply border;
-    @apply border-gray-500;
+    @apply rounded-tl-md;
+    @apply rounded-tr-md;
+    @apply border-t;
+    @apply border-t-gray-500;
+    @apply border-r;
+    @apply border-r-gray-500;
+    @apply border-l;
+    @apply border-l-gray-500;
+    /* this is the seperator between the text areas */
+    /*
+    @apply border-b;
+    @apply border-b-gray-800;
+    */
     color: #d6deeb;
     @apply bg-gray-700;
     position: relative;
@@ -106,9 +115,11 @@
     @apply bg-gray-900;
     @apply pl-4;
     @apply pr-3;
-    @apply text-gray-500;
-    @apply py-1;
-    @apply rounded-tl-md;
+    @apply text-gray-700;
+    /* this is the padding above and below the 
+     * console.log and output lines 
+     */
+    @apply pb-4;
   }
 
   .code_line_number_output {
@@ -125,13 +136,13 @@
   }
 
   .code_line_number_first {
-    @apply pt-2;
+    @apply pt-5;
+    /* this is good */
     @apply rounded-tl-md;
   }
 
   .code_line_number_last {
-    @apply pb-2;
-    @apply rounded-bl-md;
+    /* @apply pb-5; */
   }
 
   .code_line_content {
@@ -146,12 +157,8 @@
   }
 
   .code_console_log_block {
-    @apply mt-2;
-    @apply rounded-t-md;
-    @apply border-t;
     @apply border-l;
     @apply border-r;
-    @apply border-b;
     @apply border-gray-500;
     color: #d6deeb;
     @apply bg-gray-700;
@@ -159,6 +166,7 @@
 
   .code_block_output {
     @apply mb-4;
+    /* this is the bottom of the output */
     @apply rounded-b-md;
     @apply border-b;
     @apply border-l;
