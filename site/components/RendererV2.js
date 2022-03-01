@@ -95,9 +95,10 @@ document.getElementById('${snippet_id}').innerText = ${example.output}`
                   className="token-line code_line"
                 >
                   <span className="code_line_number_blank">
-                    .<br />.
+                    .<br />.<br />.
                   </span>
                   <span className={`code_line_content`}>
+                    <br />
                     <br />
                     {line.map((token, key) => (
                       <span key={key} {...getTokenProps({ token, key })} />

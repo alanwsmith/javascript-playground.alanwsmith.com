@@ -3,16 +3,16 @@ import RendererV2 from '../../components/RendererV2'
 export default function Page(props) {
   const start_substring_example = {
     snippet: `
-const full_string_1 = "example"
-const substring_from_start = full_string_1.substring(0, 3)
+const full_string_1 = "the quick brown fox"
+const substring_from_start = full_string_1.substring(0, 9)
 `,
     output: `substring_from_start`,
   }
 
   const end_substring_example = {
     snippet: `
-const full_string_2 = "example"
-const substring_to_end = full_string_2.substring(3)
+const full_string_2 = "the quick brown fox"
+const substring_to_end = full_string_2.substring(10)
 `,
     output: `substring_to_end`,
   }
