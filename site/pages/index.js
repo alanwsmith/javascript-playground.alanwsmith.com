@@ -28,6 +28,11 @@ export default function Home() {
           </Link>
         </li>
         <li>
+          <Link href="/loop-through-an-object-sorted-by-key">
+            <a>Loop Through An Object Sorted By Key</a>
+          </Link>
+        </li>
+        <li>
           <Link href="/random-number">
             <a>Random Number</a>
           </Link>
