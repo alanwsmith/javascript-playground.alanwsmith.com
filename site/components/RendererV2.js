@@ -42,7 +42,7 @@ document.getElementById('${snippet_id}').innerText = ${example.output}`
                           : `code_line_number`
                       }
                     >
-                      {i + 1}
+                      0{i + 1}
                     </span>
                   ) : (
                     ''
@@ -95,10 +95,11 @@ document.getElementById('${snippet_id}').innerText = ${example.output}`
                   className="token-line code_line"
                 >
                   <span className="code_line_number_blank">
-                    .<br />.<br />.
+                    ..
+                    <br />
+                    &nbsp;&nbsp;
                   </span>
                   <span className={`code_line_content`}>
-                    <br />
                     <br />
                     {line.map((token, key) => (
                       <span key={key} {...getTokenProps({ token, key })} />
@@ -108,7 +109,7 @@ document.getElementById('${snippet_id}').innerText = ${example.output}`
               ))}
             </pre>
             <pre className="code_block_output">
-              <span className={`code_line_number_output`}>&gt;</span>
+              <span className={`code_line_number_output`}>-&gt;</span>
               <span id={snippet_id} className={`code_line_content`}></span>
             </pre>
           </>
